@@ -71,6 +71,10 @@ var app = app || {};
       }).subscribe();
     },
 
+    remove: function(id){
+      this.props.horizon.remove(id).subscribe();
+    },
+
     subscribe: function(){
       this.props.horizon
         .order("datetime", "descending")
@@ -84,7 +88,7 @@ var app = app || {};
     render: function(){
       return (
         <div>
-        <app.ChatList messages={this.state.messages}/>
+        <app.ChatList messages={this.state.messages} remove={this.remove}/>
         <app.ChatInput
           disabled={this.props.disabled}
           onSave={this.save}
@@ -99,7 +103,7 @@ var app = app || {};
 
       // Construct list of ChatMessages
       const messages = this.props.messages.map(function(message){
-        return <app.ChatMessage message={message} key={message.id}/>;
+        return <app.ChatMessage message={message} remove={this.props.remove} key={message.id}/>;
       }, this);
 
       // Return assembled ChatList of Messages
@@ -118,7 +122,7 @@ var app = app || {};
       return (
         <li className="message">
           <img height="50px" width="50px" src={`http://api.adorable.io/avatars/50/${this.props.message.authorId}.png`}/>
-          <span className="text">
+          <span className="text" onClick={() => this.props.remove(this.props.message.id)}>
             {this.props.message.text}
           </span>
         </li>
