@@ -1,5 +1,7 @@
 Remote debugging for Horizon with [Redux DevTools extension](https://github.com/zalmoxisus/redux-devtools-extension) and [remotedev](https://github.com/zalmoxisus/remotedev).
 
+![Demo](https://cloud.githubusercontent.com/assets/7957859/18026426/9a1ae9d2-6c4e-11e6-8d52-8d3a3f981fa6.gif)
+
 ## Installation
 
 #### 1. Get the extension
