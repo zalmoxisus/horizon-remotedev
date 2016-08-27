@@ -38,7 +38,7 @@ var app = app || {};
       image.src = `http://api.adorable.io/avatars/50/${time}.png`;
 
       return {
-        horizon: horizon("react_messages"),
+        horizon: hzRemotedev(horizon("react_messages")),
         avatarUrl: image.src,
         authorId: time
       };
