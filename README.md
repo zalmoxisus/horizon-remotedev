@@ -31,7 +31,7 @@ npm install --save horizon-remotedev
 ##### CDN
 
 ```
-<script src="https://npmcdn.com/horizon-remotedev/dist/horizon-remotedev.js"></script>
+<script src="https://unpkg.com/horizon-remotedev/dist/horizon-remotedev.js"></script>
 ```
 
 ## Usage
